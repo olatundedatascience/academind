@@ -1,0 +1,15 @@
+extends layouts/mainlayout.pug
+
+block title 
+    title passing data to pug
+   
+
+
+
+block contents
+
+    h1 Products Listing
+    ul.list-group
+
+    each prd in product
+         li.list-group-item #{prd}

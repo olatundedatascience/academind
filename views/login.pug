@@ -1,0 +1,23 @@
+extends layouts/mainlayout.pug
+
+block title
+    title Login Form
+
+block contents
+
+    form(method="POST", class="form-horizontal", action="/loginform")
+        input(type="text", name="username", class="form-control", placeholder="username")
+        hr
+        input(type="password", name="password", class="form-control", placeholder="username")
+        p #{url}
+        input(type="hidden", name="csrf", id="frm")
+        hr
+        input(type="submit", value="username", class="btn btn-primary")
+    
+
+    script
+
+       // window.onload = function() {
+            let frm = document.getElementById("frm")
+            frm.setAttribute("value", #{url})
+        }
